@@ -1,15 +1,20 @@
-import { Redis } from '@upstash/redis';
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { Teacher, CourseGroup, Course, Division } from '@/types/scheduler';
 
-// Initialize Redis client
-// Upstash Redis expects UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN
-// Or we can initialize with the REDIS_URL
-const redis = process.env.UPSTASH_REDIS_REST_URL
-  ? Redis.fromEnv()
-  : new Redis({
-      url: process.env.REDIS_URL || process.env.KV_URL || '',
-      token: 'default', // For Redis protocol URL
-    });
+// Simple in-memory cache for serverless functions
+// Since we're using redis:// protocol URL, we'll use ioredis
+let Redis: any;
+let redis: any;
+
+// Initialize Redis lazily
+async function getRedis() {
+  if (!redis) {
+    // Dynamic import to avoid issues during build
+    const IORedis = (await import('ioredis')).default;
+    redis = new IORedis(process.env.REDIS_URL || process.env.KV_URL || '');
+  }
+  return redis;
+}
 
 // KV Keys
 const KEYS = {
@@ -22,15 +27,24 @@ const KEYS = {
 // Wrapper to match kv interface
 const kv = {
   get: async <T = unknown>(key: string): Promise<T | null> => {
-    return await redis.get<T>(key);
+    const client = await getRedis();
+    const data = await client.get(key);
+    if (!data) return null;
+    try {
+      return JSON.parse(data) as T;
+    } catch {
+      return data as T;
+    }
   },
   set: async <T = unknown>(key: string, value: T): Promise<string> => {
-    await redis.set(key, value);
+    const client = await getRedis();
+    await client.set(key, JSON.stringify(value));
     return 'OK';
   },
   del: async (...keys: string[]): Promise<number> => {
     if (keys.length === 0) return 0;
-    return await redis.del(...keys);
+    const client = await getRedis();
+    return await client.del(...keys);
   }
 };
 
