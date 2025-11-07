@@ -25,7 +25,8 @@ const kv = {
     return await redis.get<T>(key);
   },
   set: async <T = unknown>(key: string, value: T): Promise<string> => {
-    return await redis.set(key, value);
+    await redis.set(key, value);
+    return 'OK';
   },
   del: async (...keys: string[]): Promise<number> => {
     if (keys.length === 0) return 0;
