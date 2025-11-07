@@ -3,7 +3,7 @@ import { seedData, clearAllData } from '@/lib/kv';
 import fs from 'fs';
 import path from 'path';
 
-export async function POST(request: NextRequest) {
+async function handleSeed(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const clear = searchParams.get('clear') === 'true';
@@ -45,6 +45,15 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
+}
+
+// Support both GET and POST for convenience
+export async function GET(request: NextRequest) {
+  return handleSeed(request);
+}
+
+export async function POST(request: NextRequest) {
+  return handleSeed(request);
 }
 
 export async function DELETE() {
