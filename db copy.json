@@ -1,0 +1,862 @@
+{
+  "teachers": [
+    {
+      "id": "teacher-0000",
+      "name": "A",
+      "division": "MS",
+      "otherRole": "GLL + TSET",
+      "maxLoad": 18,
+      "preps": 4,
+      "students": 87,
+      "assignments": [
+        {
+          "courseId": "course-ccw7-z4wdkkr9p",
+          "courseName": "CCW7",
+          "courseGroup": "CCW7",
+          "load": 3,
+          "isCPT": false,
+          "students": 29
+        },
+        {
+          "courseId": "course-ccw7-isj4p84iu",
+          "courseName": "CCW(E)7",
+          "courseGroup": "CCW7",
+          "load": 4,
+          "isCPT": false,
+          "students": 13
+        },
+        {
+          "courseId": "course-ccw8-yu0d9m3gx",
+          "courseName": "CCW8",
+          "courseGroup": "CCW8",
+          "load": 3,
+          "isCPT": false,
+          "students": 29
+        },
+        {
+          "courseId": "course-ccw8-5pj3gkmeu",
+          "courseName": "CCW8",
+          "courseGroup": "CCW8",
+          "load": 5,
+          "isCPT": true,
+          "students": 16
+        }
+      ]
+    },
+    {
+      "id": "teacher-0001",
+      "name": "B",
+      "division": "MS",
+      "otherRole": "DL + TSET",
+      "maxLoad": 18,
+      "preps": 2,
+      "students": 34,
+      "assignments": [
+        {
+          "courseId": "course-ccw7-65s32ql1p",
+          "courseName": "CCW(E)7",
+          "courseGroup": "CCW7",
+          "load": 4,
+          "isCPT": false,
+          "students": 17
+        },
+        {
+          "courseId": "course-ccw6-xho3m3vki",
+          "courseName": "CCW(E)6",
+          "courseGroup": "CCW6",
+          "load": 9,
+          "isCPT": false,
+          "students": 17
+        }
+      ]
+    },
+    {
+      "id": "teacher-0002",
+      "name": "C",
+      "division": "MS",
+      "maxLoad": 15,
+      "preps": 1,
+      "students": 13,
+      "assignments": [
+        {
+          "courseId": "course-ccw8-bymzxvqow",
+          "courseName": "CCW8",
+          "courseGroup": "CCW8",
+          "load": 3,
+          "isCPT": false,
+          "students": 13
+        }
+      ]
+    },
+    {
+      "id": "teacher-0003",
+      "name": "D",
+      "division": "MS",
+      "otherRole": "DL + TSET",
+      "maxLoad": 21,
+      "preps": 1,
+      "students": 24,
+      "assignments": [
+        {
+          "courseId": "course-ccw7-hzklbb6r7",
+          "courseName": "CCW7",
+          "courseGroup": "CCW7",
+          "load": 6,
+          "isCPT": false,
+          "students": 24
+        }
+      ]
+    },
+    {
+      "id": "teacher-0004",
+      "name": "E",
+      "division": "HS",
+      "otherRole": "NEW",
+      "maxLoad": 21,
+      "preps": 4,
+      "students": 67,
+      "assignments": [
+        {
+          "courseId": "course-ccw10-o46zh9ghi",
+          "courseName": "World Civilization10",
+          "courseGroup": "CCW10",
+          "load": 10,
+          "isCPT": false,
+          "students": 16
+        },
+        {
+          "courseId": "course-ccw9-upxs5oor6",
+          "courseName": "World Civilization9",
+          "courseGroup": "CCW9",
+          "load": 5,
+          "isCPT": false,
+          "students": 16
+        },
+        {
+          "courseId": "course-el2-c5p1m1eew",
+          "courseName": "Economics EL2",
+          "courseGroup": "EL2",
+          "load": 4,
+          "isCPT": true,
+          "students": 19
+        },
+        {
+          "courseId": "course-electives-s8wu9nrbs",
+          "courseName": "Geography",
+          "courseGroup": "ELECTIVES",
+          "load": 2,
+          "isCPT": false,
+          "students": 16
+        }
+      ]
+    },
+    {
+      "id": "teacher-0005",
+      "name": "F",
+      "division": "HS",
+      "otherRole": "GLL",
+      "maxLoad": 21,
+      "preps": 3,
+      "students": 63,
+      "assignments": [
+        {
+          "courseId": "course-electives-r063q4gso",
+          "courseName": "Music",
+          "courseGroup": "ELECTIVES",
+          "load": 5,
+          "isCPT": true,
+          "students": 29
+        },
+        {
+          "courseId": "course-electives-00fha4kv6",
+          "courseName": "Drama",
+          "courseGroup": "ELECTIVES",
+          "load": 10,
+          "isCPT": false,
+          "students": 23
+        },
+        {
+          "courseId": "course-el1-2ikcf4l86",
+          "courseName": "Technology EL1",
+          "courseGroup": "EL1",
+          "load": 3,
+          "isCPT": false,
+          "students": 11
+        }
+      ]
+    },
+    {
+      "id": "teacher-0006",
+      "name": "G",
+      "division": "HS",
+      "otherRole": "M + Dorm Head",
+      "maxLoad": 18,
+      "preps": 3,
+      "students": 62,
+      "assignments": [
+        {
+          "courseId": "course-ccw9-0ezlqi1nb",
+          "courseName": "World Civilization9",
+          "courseGroup": "CCW9",
+          "load": 10,
+          "isCPT": false,
+          "students": 26
+        },
+        {
+          "courseId": "course-ccw10-vzu6ymovv",
+          "courseName": "Humanities10",
+          "courseGroup": "CCW10",
+          "load": 4,
+          "isCPT": false,
+          "students": 25
+        },
+        {
+          "courseId": "course-ccw9-auoalxgnh",
+          "courseName": "World Civilization9",
+          "courseGroup": "CCW9",
+          "load": 4,
+          "isCPT": false,
+          "students": 11
+        }
+      ]
+    },
+    {
+      "id": "teacher-0007",
+      "name": "H",
+      "division": "HS",
+      "otherRole": "NEW",
+      "maxLoad": 15,
+      "preps": 1,
+      "students": 14,
+      "assignments": [
+        {
+          "courseId": "course-ccw9-lpwckzv20",
+          "courseName": "CCW9",
+          "courseGroup": "CCW9",
+          "load": 10,
+          "isCPT": false,
+          "students": 14
+        }
+      ]
+    },
+    {
+      "id": "teacher-0008",
+      "name": "I",
+      "division": "HS",
+      "otherRole": "GLL",
+      "maxLoad": 18,
+      "preps": 3,
+      "students": 47,
+      "assignments": [
+        {
+          "courseId": "course-ccw10-fjly3e92y",
+          "courseName": "World Civilization10",
+          "courseGroup": "CCW10",
+          "load": 6,
+          "isCPT": false,
+          "students": 22
+        },
+        {
+          "courseId": "course-ccw9-ud3tqtyzt",
+          "courseName": "Humanities9",
+          "courseGroup": "CCW9",
+          "load": 4,
+          "isCPT": false,
+          "students": 10
+        },
+        {
+          "courseId": "course-electives-k6htuev4j",
+          "courseName": "Drama",
+          "courseGroup": "ELECTIVES",
+          "load": 4,
+          "isCPT": false,
+          "students": 15
+        }
+      ]
+    },
+    {
+      "id": "teacher-0009",
+      "name": "J",
+      "division": "HS",
+      "otherRole": "DPS",
+      "maxLoad": 15,
+      "preps": 3,
+      "students": 60,
+      "assignments": [
+        {
+          "courseId": "course-el2-pkzw8bdis",
+          "courseName": "Geography EL2",
+          "courseGroup": "EL2",
+          "load": 10,
+          "isCPT": false,
+          "students": 24
+        },
+        {
+          "courseId": "course-ccw10-cj8cybm7y",
+          "courseName": "World Civilization10",
+          "courseGroup": "CCW10",
+          "load": 4,
+          "isCPT": false,
+          "students": 25
+        },
+        {
+          "courseId": "course-ccw9-18rq99rv4",
+          "courseName": "World Civilization9",
+          "courseGroup": "CCW9",
+          "load": 1,
+          "isCPT": false,
+          "students": 11
+        }
+      ]
+    }
+  ],
+  "catalog": {
+    "courseGroups": [
+      {
+        "id": "CCW6",
+        "label": "CCW 6",
+        "color": "#FDB777",
+        "order": 1,
+        "columns": [
+          "CCW6_CCW6",
+          "CCW6_CCW_E_6",
+          "CCW6_CCW_E2_6"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "CCW6_CCW6",
+            "totalSections": 2,
+            "periodsPerCycle": 11,
+            "remainingPeriod": 0,
+            "studentsPerSection": 15
+          },
+          {
+            "columnId": "CCW6_CCW_E_6",
+            "totalSections": 1,
+            "periodsPerCycle": 9,
+            "remainingPeriod": 0,
+            "studentsPerSection": 17
+          },
+          {
+            "columnId": "CCW6_CCW_E2_6",
+            "totalSections": 1,
+            "periodsPerCycle": 9,
+            "remainingPeriod": 0,
+            "studentsPerSection": 16
+          }
+        ]
+      },
+      {
+        "id": "CCW7",
+        "label": "CCW 7",
+        "color": "#A5D8C7",
+        "order": 2,
+        "columns": [
+          "CCW7_CCW7",
+          "CCW7_CCW_E_7"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "CCW7_CCW7",
+            "totalSections": 2,
+            "periodsPerCycle": 9,
+            "remainingPeriod": 0,
+            "studentsPerSection": 27
+          },
+          {
+            "columnId": "CCW7_CCW_E_7",
+            "totalSections": 2,
+            "periodsPerCycle": 8,
+            "remainingPeriod": 0,
+            "studentsPerSection": 15
+          }
+        ]
+      },
+      {
+        "id": "CCW8",
+        "label": "CCW 8",
+        "color": "#F4C2D1",
+        "order": 3,
+        "columns": [
+          "CCW8_CCW8"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "CCW8_CCW8",
+            "totalSections": 3,
+            "periodsPerCycle": 11,
+            "remainingPeriod": 0,
+            "studentsPerSection": 19
+          }
+        ]
+      },
+      {
+        "id": "CCW9",
+        "label": "CCW 9",
+        "color": "#F7E89B",
+        "order": 4,
+        "columns": [
+          "CCW9_CCW9",
+          "CCW9_Humanities9",
+          "CCW9_World_Civilization9"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "CCW9_CCW9",
+            "totalSections": 1,
+            "periodsPerCycle": 10,
+            "remainingPeriod": 0,
+            "studentsPerSection": 14
+          },
+          {
+            "columnId": "CCW9_Humanities9",
+            "totalSections": 1,
+            "periodsPerCycle": 4,
+            "remainingPeriod": 0,
+            "studentsPerSection": 10
+          },
+          {
+            "columnId": "CCW9_World_Civilization9",
+            "totalSections": 4,
+            "periodsPerCycle": 20,
+            "remainingPeriod": 0,
+            "studentsPerSection": 16
+          }
+        ]
+      },
+      {
+        "id": "CCW10",
+        "label": "CCW 10",
+        "color": "#A5D8C7",
+        "order": 5,
+        "columns": [
+          "CCW10_CCW10",
+          "CCW10_Humanities10",
+          "CCW10_World_Civilization10"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "CCW10_CCW10",
+            "totalSections": 2,
+            "periodsPerCycle": 14,
+            "remainingPeriod": 0,
+            "studentsPerSection": 19
+          },
+          {
+            "columnId": "CCW10_Humanities10",
+            "totalSections": 1,
+            "periodsPerCycle": 4,
+            "remainingPeriod": 0,
+            "studentsPerSection": 25
+          },
+          {
+            "columnId": "CCW10_World_Civilization10",
+            "totalSections": 3,
+            "periodsPerCycle": 20,
+            "remainingPeriod": 0,
+            "studentsPerSection": 21
+          }
+        ]
+      },
+      {
+        "id": "EL1",
+        "label": "EL 1",
+        "color": "#6EAED8",
+        "order": 6,
+        "columns": [
+          "EL1_EL1",
+          "EL1_Economics_EL1",
+          "EL1_Humanities_EL1",
+          "EL1_Psychology_EL1",
+          "EL1_Technology_EL1"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "EL1_EL1",
+            "totalSections": 2,
+            "periodsPerCycle": 15,
+            "remainingPeriod": 0,
+            "studentsPerSection": 10
+          },
+          {
+            "columnId": "EL1_Economics_EL1",
+            "totalSections": 2,
+            "periodsPerCycle": 8,
+            "remainingPeriod": 0,
+            "studentsPerSection": 15
+          },
+          {
+            "columnId": "EL1_Humanities_EL1",
+            "totalSections": 3,
+            "periodsPerCycle": 11,
+            "remainingPeriod": 0,
+            "studentsPerSection": 19
+          },
+          {
+            "columnId": "EL1_Psychology_EL1",
+            "totalSections": 3,
+            "periodsPerCycle": 13,
+            "remainingPeriod": 0,
+            "studentsPerSection": 18
+          },
+          {
+            "columnId": "EL1_Technology_EL1",
+            "totalSections": 1,
+            "periodsPerCycle": 3,
+            "remainingPeriod": 0,
+            "studentsPerSection": 11
+          }
+        ]
+      },
+      {
+        "id": "EL2",
+        "label": "EL 2",
+        "color": "#8FB897",
+        "order": 7,
+        "columns": [
+          "EL2_EL2",
+          "EL2_Economics_EL2",
+          "EL2_Humanities_EL2",
+          "EL2_Geography_EL2"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "EL2_EL2",
+            "totalSections": 3,
+            "periodsPerCycle": 14,
+            "remainingPeriod": 0,
+            "studentsPerSection": 18
+          },
+          {
+            "columnId": "EL2_Economics_EL2",
+            "totalSections": 1,
+            "periodsPerCycle": 4,
+            "remainingPeriod": 0,
+            "studentsPerSection": 19
+          },
+          {
+            "columnId": "EL2_Humanities_EL2",
+            "totalSections": 2,
+            "periodsPerCycle": 15,
+            "remainingPeriod": 0,
+            "studentsPerSection": 18
+          },
+          {
+            "columnId": "EL2_Geography_EL2",
+            "totalSections": 1,
+            "periodsPerCycle": 10,
+            "remainingPeriod": 0,
+            "studentsPerSection": 24
+          }
+        ]
+      },
+      {
+        "id": "ELECTIVES",
+        "label": "Electives",
+        "color": "#7EC8D4",
+        "order": 8,
+        "columns": [
+          "ELECTIVES_History",
+          "ELECTIVES_Geography",
+          "ELECTIVES_Literature",
+          "ELECTIVES_Art",
+          "ELECTIVES_Music",
+          "ELECTIVES_Drama"
+        ],
+        "columnMetadata": [
+          {
+            "columnId": "ELECTIVES_History",
+            "totalSections": 1,
+            "periodsPerCycle": 15,
+            "remainingPeriod": 0,
+            "studentsPerSection": 18
+          },
+          {
+            "columnId": "ELECTIVES_Geography",
+            "totalSections": 1,
+            "periodsPerCycle": 2,
+            "remainingPeriod": 0,
+            "studentsPerSection": 16
+          },
+          {
+            "columnId": "ELECTIVES_Literature",
+            "totalSections": 1,
+            "periodsPerCycle": 14,
+            "remainingPeriod": 0,
+            "studentsPerSection": 16
+          },
+          {
+            "columnId": "ELECTIVES_Art",
+            "totalSections": 3,
+            "periodsPerCycle": 9,
+            "remainingPeriod": 0,
+            "studentsPerSection": 15
+          },
+          {
+            "columnId": "ELECTIVES_Music",
+            "totalSections": 1,
+            "periodsPerCycle": 5,
+            "remainingPeriod": 0,
+            "studentsPerSection": 29
+          },
+          {
+            "columnId": "ELECTIVES_Drama",
+            "totalSections": 2,
+            "periodsPerCycle": 14,
+            "remainingPeriod": 0,
+            "studentsPerSection": 19
+          }
+        ]
+      },
+      {
+        "id": "OTHER_SUBJECTS",
+        "label": "Other Subjects",
+        "color": "#E8E8E8",
+        "order": 9999,
+        "columns": [
+          "OTHER_SUBJECTS_Advisory",
+          "OTHER_SUBJECTS_Community_Service",
+          "OTHER_SUBJECTS_Independent_Study",
+          "OTHER_SUBJECTS_TOK"
+        ],
+        "isSystem": true,
+        "columnMetadata": [
+          {
+            "columnId": "OTHER_SUBJECTS_Advisory",
+            "totalSections": 1,
+            "periodsPerCycle": 17,
+            "remainingPeriod": 0,
+            "studentsPerSection": 16
+          },
+          {
+            "columnId": "OTHER_SUBJECTS_Community_Service",
+            "totalSections": 1,
+            "periodsPerCycle": 9,
+            "remainingPeriod": 0,
+            "studentsPerSection": 10
+          },
+          {
+            "columnId": "OTHER_SUBJECTS_Independent_Study",
+            "totalSections": 3,
+            "periodsPerCycle": 16,
+            "remainingPeriod": 0,
+            "studentsPerSection": 10
+          },
+          {
+            "columnId": "OTHER_SUBJECTS_TOK",
+            "totalSections": 2,
+            "periodsPerCycle": 17,
+            "remainingPeriod": 0,
+            "studentsPerSection": 11
+          }
+        ]
+      }
+    ],
+    "courses": [
+      {
+        "id": "CCW6_CCW6",
+        "label": "CCW6",
+        "group": "CCW6",
+        "isCPT": false
+      },
+      {
+        "id": "CCW6_CCW_E_6",
+        "label": "CCW(E)6",
+        "group": "CCW6",
+        "isCPT": false
+      },
+      {
+        "id": "CCW6_CCW_E2_6",
+        "label": "CCW(E2)6",
+        "group": "CCW6",
+        "isCPT": false
+      },
+      {
+        "id": "CCW7_CCW7",
+        "label": "CCW7",
+        "group": "CCW7",
+        "isCPT": false
+      },
+      {
+        "id": "CCW7_CCW_E_7",
+        "label": "CCW(E)7",
+        "group": "CCW7",
+        "isCPT": false
+      },
+      {
+        "id": "CCW8_CCW8",
+        "label": "CCW8",
+        "group": "CCW8",
+        "isCPT": false
+      },
+      {
+        "id": "CCW9_CCW9",
+        "label": "CCW9",
+        "group": "CCW9",
+        "isCPT": false
+      },
+      {
+        "id": "CCW9_Humanities9",
+        "label": "Humanities9",
+        "group": "CCW9",
+        "isCPT": false
+      },
+      {
+        "id": "CCW9_World_Civilization9",
+        "label": "World Civilization9",
+        "group": "CCW9",
+        "isCPT": false
+      },
+      {
+        "id": "CCW10_CCW10",
+        "label": "CCW10",
+        "group": "CCW10",
+        "isCPT": false
+      },
+      {
+        "id": "CCW10_Humanities10",
+        "label": "Humanities10",
+        "group": "CCW10",
+        "isCPT": false
+      },
+      {
+        "id": "CCW10_World_Civilization10",
+        "label": "World Civilization10",
+        "group": "CCW10",
+        "isCPT": false
+      },
+      {
+        "id": "EL1_EL1",
+        "label": "EL1",
+        "group": "EL1",
+        "isCPT": false
+      },
+      {
+        "id": "EL1_Economics_EL1",
+        "label": "Economics EL1",
+        "group": "EL1",
+        "isCPT": false
+      },
+      {
+        "id": "EL1_Humanities_EL1",
+        "label": "Humanities EL1",
+        "group": "EL1",
+        "isCPT": false
+      },
+      {
+        "id": "EL1_Psychology_EL1",
+        "label": "Psychology EL1",
+        "group": "EL1",
+        "isCPT": false
+      },
+      {
+        "id": "EL1_Technology_EL1",
+        "label": "Technology EL1",
+        "group": "EL1",
+        "isCPT": false
+      },
+      {
+        "id": "EL2_EL2",
+        "label": "EL2",
+        "group": "EL2",
+        "isCPT": false
+      },
+      {
+        "id": "EL2_Economics_EL2",
+        "label": "Economics EL2",
+        "group": "EL2",
+        "isCPT": false
+      },
+      {
+        "id": "EL2_Humanities_EL2",
+        "label": "Humanities EL2",
+        "group": "EL2",
+        "isCPT": false
+      },
+      {
+        "id": "EL2_Geography_EL2",
+        "label": "Geography EL2",
+        "group": "EL2",
+        "isCPT": false
+      },
+      {
+        "id": "ELECTIVES_History",
+        "label": "History",
+        "group": "ELECTIVES",
+        "isCPT": false
+      },
+      {
+        "id": "ELECTIVES_Geography",
+        "label": "Geography",
+        "group": "ELECTIVES",
+        "isCPT": false
+      },
+      {
+        "id": "ELECTIVES_Literature",
+        "label": "Literature",
+        "group": "ELECTIVES",
+        "isCPT": false
+      },
+      {
+        "id": "ELECTIVES_Art",
+        "label": "Art",
+        "group": "ELECTIVES",
+        "isCPT": false
+      },
+      {
+        "id": "ELECTIVES_Music",
+        "label": "Music",
+        "group": "ELECTIVES",
+        "isCPT": false
+      },
+      {
+        "id": "ELECTIVES_Drama",
+        "label": "Drama",
+        "group": "ELECTIVES",
+        "isCPT": false
+      },
+      {
+        "id": "OTHER_SUBJECTS_Advisory",
+        "label": "Advisory",
+        "group": "OTHER_SUBJECTS",
+        "isCPT": false
+      },
+      {
+        "id": "OTHER_SUBJECTS_Community_Service",
+        "label": "Community Service",
+        "group": "OTHER_SUBJECTS",
+        "isCPT": false
+      },
+      {
+        "id": "OTHER_SUBJECTS_Independent_Study",
+        "label": "Independent Study",
+        "group": "OTHER_SUBJECTS",
+        "isCPT": false
+      },
+      {
+        "id": "OTHER_SUBJECTS_TOK",
+        "label": "TOK",
+        "group": "OTHER_SUBJECTS",
+        "isCPT": false
+      }
+    ]
+  },
+  "divisions": [
+    {
+      "division": "MS",
+      "color": "#E8F5E9",
+      "label": "Middle School",
+      "order": 1
+    },
+    {
+      "division": "HS",
+      "color": "#FFF9C4",
+      "label": "High School",
+      "order": 2
+    }
+  ],
+  "metadata": {
+    "totalTeachers": 10,
+    "lastUpdated": "2025-11-07T07:07:16.810Z"
+  }
+}
