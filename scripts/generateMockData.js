@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 const fs = require('fs');
 const path = require('path');
 
@@ -203,6 +204,41 @@ function generateTeacher(index, division) {
   };
 }
 
+// Helper function to intelligently distribute totalLoad into totalSections and periodsPerCycle
+function distributeSectionsAndPeriods(totalLoad) {
+  // If no load, no sections or periods
+  if (totalLoad === 0) {
+    return { totalSections: 0, periodsPerCycle: 0 };
+  }
+
+  // Find all divisor pairs where totalSections * periodsPerCycle = totalLoad
+  const divisorPairs = [];
+  for (let i = 1; i <= Math.sqrt(totalLoad); i++) {
+    if (totalLoad % i === 0) {
+      divisorPairs.push({ totalSections: i, periodsPerCycle: totalLoad / i });
+      if (i !== totalLoad / i) {
+        divisorPairs.push({ totalSections: totalLoad / i, periodsPerCycle: i });
+      }
+    }
+  }
+
+  // Prefer pairs where totalSections is between 1-5 (reasonable number of sections)
+  const reasonablePairs = divisorPairs.filter(p => p.totalSections >= 1 && p.totalSections <= 5);
+
+  if (reasonablePairs.length > 0) {
+    // Choose the pair with totalSections closest to 2-3 (typical number of sections)
+    reasonablePairs.sort((a, b) => {
+      const aDiff = Math.abs(a.totalSections - 2.5);
+      const bDiff = Math.abs(b.totalSections - 2.5);
+      return aDiff - bDiff;
+    });
+    return reasonablePairs[0];
+  }
+
+  // If no reasonable pairs found (totalLoad > 5 and no small divisors), use the smallest divisor
+  return divisorPairs[0] || { totalSections: 1, periodsPerCycle: totalLoad };
+}
+
 function generateMockData(totalTeachers = 1000) {
   const teachers = [];
 
@@ -245,27 +281,27 @@ function generateMockData(totalTeachers = 1000) {
     const columnMetadata = columns.map(columnId => {
       const courseName = g.courses.find(c => columnId === `${g.id}_${c.replace(/[^a-zA-Z0-9]/g, '_')}`);
 
-      // Calculate totals from teacher assignments
+      // Calculate total load from teacher assignments for THIS SPECIFIC COURSE
       let totalLoad = 0;
-      let totalStudents = 0;
-      let assignmentCount = 0;
 
       teachers.forEach(teacher => {
         teacher.assignments.forEach(assignment => {
           if (assignment.courseGroup === g.id &&
-              `${g.id}_${assignment.courseName.replace(/[^a-zA-Z0-9]/g, '_')}` === columnId) {
+            `${g.id}_${assignment.courseName.replace(/[^a-zA-Z0-9]/g, '_')}` === columnId) {
             totalLoad += assignment.load;
-            totalStudents += assignment.students || 0;
-            assignmentCount++;
           }
         });
       });
 
-      // Generate reasonable metadata values
-      const totalSections = assignmentCount || Math.floor(Math.random() * 3) + 1;
-      const periodsPerCycle = totalLoad || (Math.floor(Math.random() * 10) + 8);
-      const studentsPerSection = totalStudents > 0 ? Math.round(totalStudents / totalSections) : Math.floor(Math.random() * 10) + 10;
-      const remainingPeriod = 0; // Can be customized based on capacity
+      // Distribute totalLoad into totalSections and periodsPerCycle
+      // Ensures: totalSections * periodsPerCycle = totalLoad
+      const { totalSections, periodsPerCycle } = distributeSectionsAndPeriods(totalLoad);
+
+      // Random studentsPerSection between 15-30
+      const studentsPerSection = Math.floor(Math.random() * 16) + 15; // 15 to 30 inclusive
+
+      // Always 0 as per requirement
+      const remainingPeriod = 0;
 
       return {
         columnId,
