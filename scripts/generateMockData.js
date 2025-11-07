@@ -338,7 +338,7 @@ function generateMockData(totalTeachers = 1000) {
 }
 
 // Generate and save data
-const data = generateMockData(10);
+const data = generateMockData(1000);
 const outputPath = path.join(__dirname, '..', 'db.json');
 fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
 

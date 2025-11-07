@@ -40,7 +40,7 @@ export default function Home() {
       ]);
 
       // Enhance teachers with calculated metrics
-      const enhancedTeachers = teachers.map(enhanceTeacherWithMetrics).slice(0, 10);
+      const enhancedTeachers = teachers.map(enhanceTeacherWithMetrics);
 
       setData({
         teachers: enhancedTeachers,
