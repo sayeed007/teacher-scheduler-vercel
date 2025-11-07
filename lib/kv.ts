@@ -1,5 +1,15 @@
-import { kv } from '@vercel/kv';
+import { Redis } from '@upstash/redis';
 import type { Teacher, CourseGroup, Course, Division } from '@/types/scheduler';
+
+// Initialize Redis client
+// Upstash Redis expects UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN
+// Or we can initialize with the REDIS_URL
+const redis = process.env.UPSTASH_REDIS_REST_URL
+  ? Redis.fromEnv()
+  : new Redis({
+      url: process.env.REDIS_URL || process.env.KV_URL || '',
+      token: 'default', // For Redis protocol URL
+    });
 
 // KV Keys
 const KEYS = {
@@ -8,6 +18,20 @@ const KEYS = {
   CATALOG_COURSES: 'scheduler:catalog:courses',
   DIVISIONS: 'scheduler:divisions',
 } as const;
+
+// Wrapper to match kv interface
+const kv = {
+  get: async <T = unknown>(key: string): Promise<T | null> => {
+    return await redis.get<T>(key);
+  },
+  set: async <T = unknown>(key: string, value: T): Promise<string> => {
+    return await redis.set(key, value);
+  },
+  del: async (...keys: string[]): Promise<number> => {
+    if (keys.length === 0) return 0;
+    return await redis.del(...keys);
+  }
+};
 
 // ==================== Teachers ====================
 
