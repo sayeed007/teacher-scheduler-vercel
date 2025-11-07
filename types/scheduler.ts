@@ -25,6 +25,13 @@ export interface Teacher {
   // Computed fields (calculated on frontend)
   totalLoad?: number;          // Sum of all assignment loads
   availablePeriods?: number;   // maxLoad - totalLoad
+
+  // Metadata
+  meta?: {
+    notes?: string;
+    createdAt?: string;
+    updatedAt?: string;
+  };
 }
 
 export interface CourseColumnMetadata {
@@ -33,6 +40,13 @@ export interface CourseColumnMetadata {
   periodsPerCycle: number;     // Periods per cycle for this course
   remainingPeriod: number;     // Remaining periods (mostly 0)
   studentsPerSection: number;  // Average students per section
+}
+
+export interface Course {
+  id: string;                  // Unique course identifier
+  label: string;               // Display name
+  group: string;               // Course group ID this belongs to
+  isCPT?: boolean;             // Is this a CPT (College Prep Team) course
 }
 
 export interface CourseGroup {

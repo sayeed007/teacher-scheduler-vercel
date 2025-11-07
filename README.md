@@ -28,11 +28,34 @@
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### 🌐 Option 1: Deploy to Vercel (Production)
+
+The easiest way to get started - deploy to Vercel with Vercel KV (Redis) for data storage:
+
+```bash
+# 1. Clone and install
+git clone <your-repo>
+cd teacher-scheduler
+npm install
+
+# 2. Generate mock data
+npm run generate-data
+
+# 3. Deploy to Vercel
+# Follow the guide in VERCEL_DEPLOYMENT.md
+```
+
+**👉 See [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md) for complete deployment guide**
+
+### 💻 Option 2: Local Development
+
+For local development with JSON Server:
+
+#### Prerequisites
 - Node.js 18+
 - npm or yarn
 
-### Installation & Running
+#### Installation & Running
 
 ```bash
 # 1. Install dependencies
@@ -60,7 +83,8 @@ npm run dev
 | **TanStack Virtual** | Virtual Scrolling | 3.13.12 |
 | **@dnd-kit** | Drag & Drop | 6.3.1 |
 | **Tailwind CSS** | Styling | 4.x |
-| **JSON Server** | Mock API | 1.0.0-beta.3 |
+| **Vercel KV** | Production Data Storage (Redis) | Latest |
+| **JSON Server** | Local Dev Mock API | 1.0.0-beta.3 |
 
 ## 📁 Project Structure
 

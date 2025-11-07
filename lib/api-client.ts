@@ -1,7 +1,9 @@
 // API Client for Teacher Scheduler
-import type { Teacher, CourseGroup, ValidationError, DeleteReference } from '@/types/scheduler';
+import type { Teacher, CourseGroup, ValidationError, DeleteReference, DivisionConfig } from '@/types/scheduler';
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+// Use Next.js API routes (/api/*) which work with Vercel KV
+// Falls back to json-server (localhost:3001) for local development if API_URL is set
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || '/api';
 
 export class ApiError extends Error {
   constructor(
@@ -145,6 +147,31 @@ export const catalogApi = {
       const error = await response.json().catch(() => ({ message: response.statusText }));
       throw new ApiError(error.message || 'Delete failed', response.status, error.errors, error.references);
     }
+  }
+};
+
+// Divisions API
+export const divisionApi = {
+  getAll: async (): Promise<DivisionConfig[]> => {
+    const response = await fetch(`${API_BASE}/divisions`);
+    return handleResponse<DivisionConfig[]>(response);
+  }
+};
+
+// Seed API (for Vercel KV deployment)
+export const seedApi = {
+  seed: async (clear = false) => {
+    const response = await fetch(`${API_BASE}/seed?clear=${clear}`, {
+      method: 'POST'
+    });
+    return handleResponse<{ success: boolean; message: string; counts: Record<string, number> }>(response);
+  },
+
+  clear: async () => {
+    const response = await fetch(`${API_BASE}/seed`, {
+      method: 'DELETE'
+    });
+    return handleResponse<{ success: boolean; message: string }>(response);
   }
 };
 

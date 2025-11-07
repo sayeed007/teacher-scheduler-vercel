@@ -8,7 +8,7 @@ import { TeacherFormDialog } from '@/components/teachers/TeacherFormDialog';
 import { ConfirmDialog } from '@/components/ui/ConfirmDialog';
 import { ToastContainer } from '@/components/ui/Toast';
 import { CatalogManager } from '@/components/catalog/CatalogManager';
-import { teacherApi, catalogApi, toast, ApiError } from '@/lib/api-client';
+import { teacherApi, catalogApi, divisionApi, toast, ApiError } from '@/lib/api-client';
 import type { TeacherFormData } from '@/lib/validations/teacher-schema';
 
 export default function Home() {
@@ -32,11 +32,11 @@ export default function Home() {
       setIsLoading(true);
       setError(null);
 
-      // Fetch from JSON Server endpoints
+      // Fetch from API endpoints
       const [teachers, catalog, divisions] = await Promise.all([
         teacherApi.getAll(),
         catalogApi.get(),
-        fetch('http://localhost:3001/divisions').then(r => r.json()),
+        divisionApi.getAll(),
       ]);
 
       // Enhance teachers with calculated metrics
